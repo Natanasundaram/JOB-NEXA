@@ -1,0 +1,1755 @@
+/* =====================================
+   CANDIDATE DASHBOARD - GLOBAL LAYOUT
+===================================== */
+
+.candidate-dashboard {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    align-items: stretch;
+}
+
+/* =====================================
+   SIDEBAR
+===================================== */
+
+.candidate-dashboard .dashboard-sidebar {
+    width: 250px;
+    min-width: 250px;
+    max-width: 250px;
+    flex: 0 0 250px;
+    min-height: 100vh;
+    background-color: #172554;
+    color: white;
+    padding: 30px 20px;
+    box-sizing: border-box;
+}
+
+.candidate-dashboard .sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    color: #f8fafc;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+    margin: 5px 0 40px;
+    padding: 8px 10px;
+    white-space: nowrap;
+}
+
+.candidate-dashboard .sidebar-logo span {
+    color: #60a5fa;
+    font-weight: 800;
+}
+
+.candidate-dashboard .sidebar-logo:hover {
+    opacity: 0.95;
+}
+
+.candidate-dashboard .sidebar-heading {
+    color: #94a3b8;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    margin-bottom: 18px;
+}
+
+/* SIDEBAR NAVIGATION */
+
+.candidate-dashboard .dashboard-sidebar nav {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    width: 100%;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+}
+
+/* SIDEBAR LINKS */
+
+.candidate-dashboard .dashboard-sidebar nav .sidebar-link {
+    display: block !important;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 13px 15px;
+    margin: 0;
+    color: #cbd5e1;
+    background: transparent;
+    text-decoration: none;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 8px;
+    white-space: normal;
+    transition: background-color 0.2s ease;
+}
+
+.candidate-dashboard .dashboard-sidebar nav .sidebar-link:hover {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+/* =====================================
+   MAIN DASHBOARD CONTENT
+===================================== */
+
+.candidate-dashboard .dashboard-main {
+    flex: 1;
+    min-width: 0;
+    padding: 35px 40px;
+    background-color: #f1f5f9;
+    overflow-x: hidden;
+}
+
+.candidate-dashboard .dashboard-header {
+    margin-bottom: 30px;
+}
+
+.candidate-dashboard .dashboard-header h1 {
+    color: #172554;
+    font-size: 29px;
+    font-weight: 700;
+    margin: 0 0 10px;
+}
+
+.candidate-dashboard .dashboard-header p {
+    color: #64748b;
+    font-size: 15px;
+    margin: 0;
+}
+
+/* =====================================
+   SECTION HEADINGS
+===================================== */
+
+.candidate-dashboard .dashboard-main h3 {
+    color: #1e40af;
+    font-size: 20px;
+    font-weight: 650;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.candidate-dashboard .dashboard-main h4 {
+    color: #1e40af;
+    font-size: 16px;
+    margin-top: 0;
+}
+
+/* =====================================
+   PROFILE SECTION
+===================================== */
+
+/* =====================================
+   PROFILE CARD
+===================================== */
+
+.candidate-dashboard .profile-card {
+    background: #ffffff;
+    padding: 28px;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+    min-width: 0;
+    box-sizing: border-box;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.candidate-dashboard .profile-card:hover {
+    border-color: #cbd5e1;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.candidate-dashboard .profile-card p {
+    color: #475569;
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 12px 0;
+}
+
+/* =====================================
+   PROFILE HEADER
+===================================== */
+
+.candidate-dashboard .profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 24px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.candidate-dashboard .profile-header h3 {
+    margin: 0;
+    color: #0f172a;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+}
+
+.candidate-dashboard .profile-header .edit-profile-btn {
+    flex-shrink: 0;
+    padding: 10px 16px;
+    border: 1px solid #2563eb;
+    border-radius: 9px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.candidate-dashboard .profile-header .edit-profile-btn:hover:not(:disabled) {
+    background: #1d4ed8;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+    transform: translateY(-1px);
+}
+
+.candidate-dashboard .edit-profile-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+
+
+
+/* =====================================
+   PROFILE DETAILS + COMPLETION
+===================================== */
+
+.candidate-dashboard .profile-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.candidate-dashboard .profile-details {
+    flex: 1;
+    min-width: 0;
+}
+
+.candidate-dashboard .profile-details p {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin: 14px 0;
+    color: #475569;
+    font-size: 14px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.candidate-dashboard .profile-details p strong {
+    color: #1e293b;
+    font-weight: 600;
+}
+
+
+
+
+/* =====================================
+   PROFILE COMPLETION
+===================================== */
+
+.candidate-dashboard .profile-completion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-width: 150px;
+    flex-shrink: 0;
+    padding: 18px;
+    border-radius: 14px;
+    background: #f8fafc;
+    border: 1px solid #f1f5f9;
+}
+
+.candidate-dashboard .profile-completion h4 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: #334155;
+    text-align: center;
+}
+
+.candidate-dashboard .progress-circle {
+    width: 118px;
+    height: 118px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: conic-gradient(
+        #2563eb var(--progress),
+        #dbeafe 0
+    );
+}
+
+.candidate-dashboard .progress-circle::before {
+    content: "";
+    position: absolute;
+    width: 92px;
+    height: 92px;
+    background: #ffffff;
+    border-radius: 50%;
+}
+
+.candidate-dashboard .progress-value {
+    position: relative;
+    z-index: 1;
+    font-size: 24px;
+    font-weight: 800;
+    color: #1e40af;
+    letter-spacing: -0.5px;
+}
+
+.candidate-dashboard .profile-completion p {
+    margin: 0;
+    font-size: 12px;
+    color: #64748b;
+    text-align: center;
+}
+
+
+
+/* =====================================
+   PROFILE LAYOUT
+===================================== */
+
+.candidate-dashboard .profile-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    align-items: start;
+    margin-bottom: 24px;
+}
+
+.candidate-dashboard .profile-layout.editing {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.candidate-dashboard .profile-layout .profile-card {
+    margin-bottom: 0;
+}
+
+
+
+
+/* =====================================
+   EDIT PROFILE CARD
+===================================== */
+
+.candidate-dashboard .edit-profile-card {
+    min-width: 0;
+    box-sizing: border-box;
+    background: #ffffff;
+    padding: 28px;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+}
+
+.candidate-dashboard .edit-profile-card h3 {
+    margin: 0 0 24px;
+    color: #0f172a;
+    font-size: 19px;
+    font-weight: 700;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.candidate-dashboard .edit-profile-card label {
+    display: block;
+    margin-bottom: 8px;
+    color: #334155;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.candidate-dashboard .edit-profile-card input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    margin-bottom: 18px;
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+    outline: none;
+    background: #ffffff;
+    color: #0f172a;
+    font-size: 14px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.candidate-dashboard .edit-profile-card input::placeholder {
+    color: #94a3b8;
+}
+
+.candidate-dashboard .edit-profile-card input:hover {
+    border-color: #94a3b8;
+}
+
+.candidate-dashboard .edit-profile-card input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+/* Update and Cancel buttons */
+
+.candidate-dashboard .edit-profile-card .update-profile-btn,
+.candidate-dashboard .edit-profile-card .cancel-profile-btn {
+    padding: 10px 17px;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.candidate-dashboard .edit-profile-card .update-profile-btn {
+    margin-right: 8px;
+    background: #2563eb;
+    color: #ffffff;
+    border: 1px solid #2563eb;
+}
+
+.candidate-dashboard .edit-profile-card .update-profile-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.candidate-dashboard .edit-profile-card .cancel-profile-btn {
+    background: #f1f5f9;
+    color: #475569;
+    border: 1px solid #e2e8f0;
+}
+
+.candidate-dashboard .edit-profile-card .cancel-profile-btn:hover {
+    background: #e2e8f0;
+}
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 1000px) {
+    .candidate-dashboard .profile-layout.editing {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .candidate-dashboard .profile-content {
+        gap: 22px;
+    }
+}
+
+@media (max-width: 700px) {
+    .candidate-dashboard .profile-card,
+    .candidate-dashboard .edit-profile-card {
+        padding: 22px;
+        border-radius: 13px;
+    }
+
+    .candidate-dashboard .profile-content {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .candidate-dashboard .profile-completion {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        padding: 18px;
+    }
+
+    .candidate-dashboard .profile-header {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .candidate-dashboard .profile-header h3 {
+        font-size: 18px;
+    }
+
+    .candidate-dashboard .profile-details p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .candidate-dashboard .profile-card,
+    .candidate-dashboard .edit-profile-card {
+        padding: 17px;
+        border-radius: 11px;
+    }
+
+    .candidate-dashboard .profile-header {
+        gap: 12px;
+        margin-bottom: 18px;
+    }
+
+    .candidate-dashboard .profile-header .edit-profile-btn {
+        padding: 9px 12px;
+        font-size: 12px;
+    }
+
+    .candidate-dashboard .profile-header h3 {
+        font-size: 17px;
+    }
+
+    .candidate-dashboard .profile-details p {
+        display: block;
+        margin: 12px 0;
+        overflow-wrap: anywhere;
+    }
+
+    .candidate-dashboard .progress-circle {
+        width: 105px;
+        height: 105px;
+    }
+
+    .candidate-dashboard .progress-circle::before {
+        width: 81px;
+        height: 81px;
+    }
+
+    .candidate-dashboard .progress-value {
+        font-size: 21px;
+    }
+
+    .candidate-dashboard .edit-profile-card h3 {
+        font-size: 17px;
+        margin-bottom: 20px;
+    }
+
+    .candidate-dashboard .edit-profile-card input {
+        padding: 11px 12px;
+        font-size: 13px;
+    }
+
+    .candidate-dashboard .edit-profile-card .update-profile-btn,
+    .candidate-dashboard .edit-profile-card .cancel-profile-btn {
+        padding: 10px 13px;
+        font-size: 12px;
+    }
+}
+
+
+
+/* =====================================
+   RESUME SECTION
+===================================== */
+
+/* =====================================
+   RESUME CARD
+===================================== */
+
+.candidate-dashboard .resume-card {
+    background: #ffffff;
+    padding: 28px;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+    box-sizing: border-box;
+    min-width: 0;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.candidate-dashboard .resume-card:hover {
+    border-color: #cbd5e1;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+/* =====================================
+   RESUME UPLOAD FORM
+===================================== */
+
+.candidate-dashboard .resume-card form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px;
+    margin: 20px 0;
+}
+
+.candidate-dashboard .resume-card input[type="file"] {
+    flex: 1;
+    width: 100%;
+    min-width: 0;
+    max-width: 420px;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+    background: #f8fafc;
+    color: #475569;
+    font-size: 13px;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.candidate-dashboard .resume-card input[type="file"]:hover {
+    border-color: #94a3b8;
+}
+
+.candidate-dashboard .resume-card input[type="file"]:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.candidate-dashboard .resume-card input[type="file"]::file-selector-button {
+    margin-right: 12px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    background: #dbeafe;
+    color: #1d4ed8;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.candidate-dashboard .resume-card input[type="file"]::file-selector-button:hover {
+    background: #bfdbfe;
+}
+
+/* =====================================
+   RESUME BUTTONS
+===================================== */
+
+.candidate-dashboard .resume-card button {
+    padding: 11px 18px;
+    border: 1px solid #2563eb;
+    border-radius: 9px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.candidate-dashboard .resume-card button:hover {
+    background: #1d4ed8;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.18);
+    transform: translateY(-1px);
+}
+
+.candidate-dashboard .resume-card button:active {
+    transform: translateY(0);
+}
+
+.candidate-dashboard .resume-card button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* =====================================
+   VIEW RESUME BUTTON
+===================================== */
+
+.candidate-dashboard .resume-card .view-resume-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 8px;
+    background: #eff6ff;
+    color: #1d4ed8;
+    border: 1px solid #bfdbfe;
+}
+
+.candidate-dashboard .resume-card .view-resume-btn:hover {
+    background: #dbeafe;
+    border-color: #93c5fd;
+    box-shadow: none;
+}
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 700px) {
+    .candidate-dashboard .resume-card {
+        padding: 22px;
+        border-radius: 13px;
+    }
+
+    .candidate-dashboard .resume-card form {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .candidate-dashboard .resume-card input[type="file"] {
+        max-width: none;
+    }
+
+    .candidate-dashboard .resume-card button {
+        width: 100%;
+    }
+
+    .candidate-dashboard .resume-card .view-resume-btn {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 480px) {
+    .candidate-dashboard .resume-card {
+        padding: 17px;
+        border-radius: 11px;
+    }
+
+    .candidate-dashboard .resume-card input[type="file"] {
+        padding: 9px;
+        font-size: 12px;
+    }
+
+    .candidate-dashboard .resume-card input[type="file"]::file-selector-button {
+        padding: 7px 9px;
+        margin-right: 8px;
+        font-size: 11px;
+    }
+
+    .candidate-dashboard .resume-card button {
+        padding: 10px 14px;
+        font-size: 12px;
+    }
+}
+
+
+
+/* =====================================
+   APPLICATIONS SECTION
+===================================== */
+
+.candidate-dashboard #applications {
+    background: transparent;
+    padding: 0;
+    border: none;
+    margin-bottom: 30px;
+}
+
+.candidate-dashboard .applications-list {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 16px;
+    align-items: start;
+    width: 100%;
+}
+
+.candidate-dashboard .application-card {
+    background-color: #ffffff;
+    padding: 23px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow-wrap: anywhere;
+}
+
+.candidate-dashboard .application-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.candidate-dashboard .application-card p {
+    color: #475569;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+/* =====================================
+   STATUS HISTORY
+===================================== */
+
+.candidate-dashboard .history-card {
+    background-color: #eff6ff;
+    border-left: 4px solid #2563eb;
+    padding: 18px;
+    margin-top: 18px;
+    border-radius: 8px;
+}
+
+.candidate-dashboard .history-card p {
+    font-size: 13px;
+    color: #334155;
+}
+
+
+
+/* =====================================
+   CANDIDATE SKILLS SECTION
+===================================== */
+
+.candidate-dashboard .candidate-skills-card {
+    background: #ffffff;
+    padding: 24px;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
+    margin-bottom: 24px;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.candidate-dashboard .skills-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.candidate-dashboard .skills-header h3 {
+    margin: 0;
+    color: #0f172a;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.candidate-dashboard .skills-header p {
+    margin: 6px 0 0;
+    color: #64748b;
+    font-size: 13px;
+}
+
+/* Add Skills button */
+
+.candidate-dashboard .add-skills-btn {
+    flex-shrink: 0;
+    padding: 10px 15px;
+    border: 1px solid #2563eb;
+    border-radius: 8px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.candidate-dashboard .add-skills-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+/* Available skills dropdown panel */
+
+.candidate-dashboard .available-skills-panel {
+    padding: 18px;
+    margin-bottom: 20px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+}
+
+.candidate-dashboard .available-skills-panel h4 {
+    margin: 0 0 14px;
+    color: #334155;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.candidate-dashboard .add-skill-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.candidate-dashboard .add-skill-controls select {
+    flex: 1;
+    min-width: 0;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #334155;
+    font-size: 13px;
+    outline: none;
+}
+
+.candidate-dashboard .add-skill-controls select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.candidate-dashboard .confirm-add-skill-btn {
+    padding: 10px 16px;
+    border: 1px solid #2563eb;
+    border-radius: 8px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.candidate-dashboard .confirm-add-skill-btn:hover:not(:disabled) {
+    background: #1d4ed8;
+}
+
+.candidate-dashboard .confirm-add-skill-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Candidate skill chips */
+
+.candidate-dashboard .candidate-skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.candidate-dashboard .candidate-skill-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 8px 7px 12px;
+    border: 1px solid #bfdbfe;
+    border-radius: 999px;
+    background: #eff6ff;
+    color: #1e40af;
+    font-size: 13px;
+    font-weight: 600;
+    max-width: 100%;
+}
+
+.candidate-dashboard .candidate-skill-chip span {
+    overflow-wrap: anywhere;
+}
+
+/* X button */
+
+.candidate-dashboard .delete-skill-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 21px;
+    height: 21px;
+    flex-shrink: 0;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    color: #64748b;
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.candidate-dashboard .delete-skill-btn:hover {
+    background: #dbeafe;
+    color: #dc2626;
+}
+
+/* Loading, empty, error, and success messages */
+
+.candidate-dashboard .candidate-skills-card .loading-message,
+.candidate-dashboard .candidate-skills-card .empty-message {
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.candidate-dashboard .candidate-skills-card .error-message,
+.candidate-dashboard .candidate-skills-card .success-message {
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.candidate-dashboard .candidate-skills-card .error-message {
+    color: #b91c1c;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+}
+
+.candidate-dashboard .candidate-skills-card .success-message {
+    color: #15803d;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+    .candidate-dashboard .candidate-skills-card {
+        padding: 18px;
+    }
+
+    .candidate-dashboard .skills-header {
+        align-items: flex-start;
+    }
+
+    .candidate-dashboard .skills-header h3 {
+        font-size: 17px;
+    }
+
+    .candidate-dashboard .add-skills-btn {
+        padding: 9px 12px;
+        font-size: 12px;
+    }
+
+    .candidate-dashboard .available-skills-panel {
+        padding: 14px;
+    }
+
+    .candidate-dashboard .add-skill-controls {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .candidate-dashboard .confirm-add-skill-btn {
+        width: 100%;
+    }
+}
+/* =====================================
+   BUTTONS
+===================================== */
+
+.candidate-dashboard .dashboard-main button {
+    background-color: #2563eb;
+    color: #ffffff;
+    padding: 11px 18px;
+    border: none;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.candidate-dashboard .dashboard-main button:hover {
+    background-color: #1d4ed8;
+}
+
+.candidate-dashboard .skill-item button {
+    background-color: #dc2626;
+    padding: 8px 14px;
+}
+
+.candidate-dashboard .skill-item button:hover {
+    background-color: #b91c1c;
+}
+
+/* =====================================
+   SUCCESS AND ERROR MESSAGES
+===================================== */
+
+.candidate-dashboard .success-message {
+    color: #15803d;
+    background-color: #dcfce7;
+    padding: 11px 14px;
+    border-radius: 7px;
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+.candidate-dashboard .error-message {
+    color: #b91c1c;
+    background-color: #fee2e2;
+    padding: 11px 14px;
+    border-radius: 7px;
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+/* =====================================
+   INTERVIEWS SECTION
+===================================== */
+
+/* =====================================
+   CANDIDATE INTERVIEWS
+===================================== */
+
+.candidate-dashboard .interviews-section {
+    margin-bottom: 24px;
+    min-width: 0;
+}
+
+.candidate-dashboard .interviews-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+/* =====================================
+   INTERVIEW CARD
+===================================== */
+
+.candidate-dashboard .interview-card {
+    background: #ffffff;
+    padding: 17px 19px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease,
+                transform 0.2s ease;
+    overflow-wrap: anywhere;
+    min-width: 0;
+}
+
+.candidate-dashboard .interview-card:hover {
+    border-color: #bfdbfe;
+    box-shadow: 0 5px 14px rgba(15, 23, 42, 0.06);
+    transform: translateY(-2px);
+}
+
+/* Interview job title */
+
+.candidate-dashboard .interview-card h4 {
+    color: #1e3a8a;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 0 0 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+/* Interview details */
+
+.candidate-dashboard .interview-card p {
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 8px 0;
+}
+
+.candidate-dashboard .interview-card p strong {
+    color: #334155;
+    font-weight: 600;
+}
+
+/* =====================================
+   LOADING AND EMPTY STATES
+===================================== */
+
+.candidate-dashboard .interviews-section .loading-message,
+.candidate-dashboard .interviews-section .empty-message {
+    color: #64748b;
+    font-size: 13px;
+    background: #ffffff;
+    padding: 16px;
+    border-radius: 10px;
+    border: 1px dashed #cbd5e1;
+    text-align: center;
+}
+
+/* =====================================
+   ERROR MESSAGE
+===================================== */
+
+.candidate-dashboard .interviews-section .error-message {
+    color: #b91c1c;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    padding: 11px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 900px) {
+    .candidate-dashboard .interviews-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .candidate-dashboard .interview-card {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .candidate-dashboard .interviews-list {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .candidate-dashboard .interview-card {
+        padding: 15px 16px;
+    }
+
+    .candidate-dashboard .interview-card h4 {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    .candidate-dashboard .interview-card p {
+        font-size: 12px;
+        margin: 7px 0;
+    }
+}
+
+/* =====================================
+   RESPONSIVE DESIGN - TABLET
+===================================== */
+
+@media (max-width: 900px) {
+
+    .candidate-dashboard .dashboard-sidebar {
+        width: 210px;
+        min-width: 210px;
+        max-width: 210px;
+        flex-basis: 210px;
+        padding: 25px 15px;
+    }
+
+    .candidate-dashboard .dashboard-main {
+        padding: 25px 20px;
+    }
+
+    .candidate-dashboard .applications-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+
+    .candidate-dashboard .interviews-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =====================================
+   RESPONSIVE DESIGN - PROFILE
+===================================== */
+
+@media (max-width: 768px) {
+
+    .candidate-dashboard .profile-layout.editing {
+        grid-template-columns: 1fr;
+    }
+
+    .candidate-dashboard .profile-content {
+        gap: 20px;
+    }
+
+    .candidate-dashboard .profile-completion {
+        min-width: 120px;
+    }
+
+}
+
+/* =====================================
+   RESPONSIVE DESIGN - MOBILE
+===================================== */
+
+@media (max-width: 600px) {
+
+    .candidate-dashboard {
+        flex-direction: column;
+    }
+
+    .candidate-dashboard .dashboard-sidebar {
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+        flex: none;
+        min-height: auto;
+        padding: 18px;
+    }
+
+    .candidate-dashboard .sidebar-logo {
+        font-size: 22px;
+        margin: 0 0 15px;
+    }
+
+    .candidate-dashboard .sidebar-heading {
+        margin-bottom: 10px;
+    }
+
+    .candidate-dashboard .dashboard-sidebar nav {
+        flex-direction: row !important;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .candidate-dashboard .dashboard-sidebar nav .sidebar-link {
+        width: auto;
+        padding: 10px 12px;
+    }
+
+    .candidate-dashboard .dashboard-main {
+        padding: 18px 14px;
+    }
+
+    .candidate-dashboard .dashboard-header h1 {
+        font-size: 23px;
+    }
+
+    .candidate-dashboard .dashboard-main section {
+        padding: 17px;
+    }
+
+    .candidate-dashboard .skill-item {
+        max-width: 100%;
+    }
+
+    .candidate-dashboard .available-skills-card select {
+        max-width: 100%;
+    }
+
+    /* Profile details and circle on mobile */
+
+    .candidate-dashboard .profile-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .candidate-dashboard .profile-details {
+        width: 100%;
+    }
+
+    .candidate-dashboard .profile-completion {
+        align-self: center;
+        margin: 10px auto 0;
+    }
+
+    .candidate-dashboard .progress-circle {
+        width: 105px;
+        height: 105px;
+    }
+
+    .candidate-dashboard .progress-circle::before {
+        width: 82px;
+        height: 82px;
+    }
+
+    .candidate-dashboard .progress-value {
+        font-size: 21px;
+    }
+
+    .candidate-dashboard .edit-profile-card {
+        width: 100%;
+    }
+
+}/* APPLICATIONS SECTION */
+
+.applications-section {
+    margin-top: 28px;
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+}
+
+.applications-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.applications-header h3 {
+    margin: 0;
+    color: #0f172a;
+    font-size: 20px;
+}
+
+.applications-header p {
+    margin: 6px 0 0;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.applications-count {
+    padding: 6px 10px;
+    background: #eff6ff;
+    color: #2563eb;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.applications-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    align-items: start;
+}
+
+.application-card {
+    padding: 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background: #ffffff;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.application-card:hover {
+    border-color: #bfdbfe;
+    box-shadow: 0 3px 12px rgba(15, 23, 42, 0.06);
+}
+
+.application-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.application-job-info {
+    min-width: 0;
+}
+
+.application-job-info h4 {
+    margin: 0;
+    color: #1e293b;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.application-job-meta {
+    margin: 6px 0 0;
+    color: #64748b;
+    font-size: 12px;
+}
+
+.application-status {
+    padding: 5px 9px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+    background: #f1f5f9;
+    color: #475569;
+}
+
+/* Status badge colors */
+
+.application-status.applied {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.application-status.shortlisted {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.application-status.rejected {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.application-status.interview-scheduled {
+    background: #f3e8ff;
+    color: #7e22ce;
+}
+
+.application-card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.application-date {
+    color: #64748b;
+    font-size: 11px;
+}
+
+.history-toggle-btn {
+    padding: 6px 10px;
+    border: 1px solid #bfdbfe;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #2563eb;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.history-toggle-btn:hover {
+    background: #eff6ff;
+}
+
+.application-history {
+    margin-top: 14px;
+    padding: 12px;
+    background: #f8fafc;
+    border-radius: 8px;
+}
+
+.application-history h5 {
+    margin: 0 0 10px;
+    color: #334155;
+    font-size: 13px;
+}
+
+.history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.history-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    color: #475569;
+    font-size: 12px;
+}
+
+.no-applications {
+    padding: 24px 12px;
+    text-align: center;
+    background: #f8fafc;
+    border-radius: 8px;
+}
+
+.no-applications h4 {
+    margin: 0;
+    color: #334155;
+    font-size: 14px;
+}
+
+.no-applications p {
+    margin: 6px 0 0;
+    color: #64748b;
+    font-size: 12px;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+    .applications-section {
+        padding: 16px;
+    }
+
+    .application-card {
+        padding: 12px;
+    }
+
+    .application-card-top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .application-card-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .history-toggle-btn {
+        width: 100%;
+    }
+}
+/* APPLICATION CARD ACTIONS */
+
+.application-card-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.view-details-btn {
+    padding: 6px 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background: #f8fafc;
+    color: #334155;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.view-details-btn:hover {
+    background: #f1f5f9;
+}
+
+/* APPLICATION DETAILS PANEL */
+
+.application-details {
+    margin-top: 14px;
+    padding: 14px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+}
+
+.application-details h5 {
+    margin: 0 0 12px;
+    color: #334155;
+    font-size: 13px;
+}
+
+.application-details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.application-detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.application-detail-item span {
+    color: #64748b;
+    font-size: 11px;
+}
+
+.application-detail-item strong {
+    color: #334155;
+    font-size: 12px;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+/* CARD FOOTER */
+
+.application-card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.application-date {
+    color: #64748b;
+    font-size: 11px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+    .application-card-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .application-card-actions {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .application-card-actions button {
+        width: 100%;
+    }
+
+    .application-details-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* APPLICATIONS GRID - RESPONSIVE */
+@media (min-width: 1024px) {
+    .candidate-dashboard .applications-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1023px) {
+    .candidate-dashboard .applications-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .candidate-dashboard .applications-list {
+        grid-template-columns: 1fr !important;
+    }
+}
+/* =====================================
+   APPLICATION CARD BUTTONS - BOTTOM RIGHT
+   ===================================== */
+
+.candidate-dashboard .application-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.candidate-dashboard .application-card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 10px;
+    margin-top: auto;
+    padding-top: 12px;
+}
+
+.candidate-dashboard .application-card-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 6px;
+    margin-left: auto;
+    flex-wrap: wrap;
+}
+
+.candidate-dashboard .application-card-actions button,
+.candidate-dashboard .history-toggle-btn,
+.candidate-dashboard .view-details-btn {
+    padding: 5px 8px;
+    font-size: 10px;
+    line-height: 1.3;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+    .candidate-dashboard .application-card-bottom {
+        align-items: flex-end;
+        flex-direction: row;
+    }
+
+    .candidate-dashboard .application-card-actions {
+        width: auto;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .candidate-dashboard .application-card-actions button {
+        width: auto;
+    }
+}
