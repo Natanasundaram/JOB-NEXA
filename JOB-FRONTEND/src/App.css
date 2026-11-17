@@ -1,0 +1,115 @@
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f7fa;
+  color: #222;
+}
+
+#root,
+.app {
+  min-height: 100vh;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e3a5f;
+  color: white;
+  padding: 18px 40px;
+}
+
+nav div {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #93c5fd;
+}
+
+/* Home page */
+.welcome-section {
+  padding: 60px 24px;
+  text-align: center;
+}
+
+.welcome-section h1 {
+  font-size: 36px;
+  color: #1e3a5f;
+  margin-bottom: 12px;
+}
+
+.welcome-section p {
+  color: #64748b;
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+/* View Jobs link */
+.view-jobs-btn {
+  display: inline-block;
+  background-color: #2563eb;
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+}
+
+.view-jobs-btn:hover {
+  background-color: #1d4ed8;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+  nav {
+    padding: 16px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav div {
+    gap: 15px;
+  }
+
+  .welcome-section {
+    padding: 40px 16px;
+  }
+
+  .welcome-section h1 {
+    font-size: 28px;
+  }
+}
+.logout-btn {
+background-color: #e74c3c;
+color: white;
+border: none;
+padding: 5px 5px;
+border-radius: 6px;
+font-size: 18px;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.logout-btn {
+background-color: #c0392b;
+}
+
+.logout-btn {
+transform: scale(0.95);
+}
